@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-# Vert.x Example Maven Project
-
-Example project for creating a Vert.x module with a Gradle build.
-
-By default this module contains a simple Java verticle which listens on the event bus and responds to `ping!`
-messages with `pong!`.
-
-This example also shows you how to write tests in Java, Groovy, Ruby and Python
-
-=======
 # vertx-verticles-test
->>>>>>> d530b6f3f9b13b35f304ec919949162424881e84
+
+This is an example project to underline Vert.x's threading model.
+
+Run with maven :
+
+```mvn clean package vertx:runMod -Dvertx.pool.worker.size=5 -Dvertx.pool.eventloop.size=1```
+
+You can tweak the worker pool size and event loop size, but I recommend using these values to stress the effect of having :
+* a blocked event loop
+* no more threads available in worker pool
